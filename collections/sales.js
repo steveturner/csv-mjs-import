@@ -1,69 +1,73 @@
 Sales = new Meteor.Collection( 'sales' );
 
 Sales.allow({
-  insert: () => false,
-  update: () => false,
-  remove: () => false
-});
-
-Sales.deny({
   insert: () => true,
   update: () => true,
   remove: () => true
 });
 
+// Sales.deny({
+//   insert: () => true,
+//   update: () => true,
+//   remove: () => true
+// });
+
 let SalesSchema = new SimpleSchema({
-  "saleId": {
+  "file": {
     type: String,
     label: "ID number for the sale."
   },
-  "date": {
+  "APN": {
     type: String,
     label: "Date"
   },
-  "product": {
+  "legal": {
     type: String,
     label: "Product"
   },
-  "price": {
+  "county": {
     type: String,
     label: "Price"
   },
-  "paymentType": {
+  "saleDate": {
     type: String,
     label: "Payment Type"
   },
-  "name": {
+  "salePrice": {
     type: String,
     label: "Name"
   },
-  "city": {
+  "acres": {
     type: String,
     label: "City"
   },
-  "state": {
+  "buyer": {
     type: String,
     label: "State"
   },
-  "country": {
+  "buyerAddress": {
     type: String,
     label: "Country"
   },
-  "created": {
+  "seller": {
     type: String,
     label: "Created"
   },
-  "lastLogin": {
+  "saleType": {
     type: String,
     label: "Last Login"
   },
-  "latitude": {
+  "saleNote": {
     type: String,
-    label: "Latitude"
+    label: "saleNote"
   },
-  "longitude": {
+  "lender": {
     type: String,
-    label: "Longitude"
+    label: "lender"
+  },
+  "improvements": {
+    type: String,
+    label: "improvements"
   }
 });
 

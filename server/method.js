@@ -4,7 +4,7 @@ Meteor.methods({
 
     for ( let i = 0; i < data.length; i++ ) {
       let item   = data[ i ],
-          exists = Sales.findOne( { saleId: item.saleId } );
+          exists = Sales.findOne( { file: item.file } );
 
       if ( !exists ) {
         Sales.insert( data[ i ] );

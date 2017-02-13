@@ -13,7 +13,7 @@ Template.dashboard.events({
     template.uploading.set( true );
 
     Papa.parse( event.target.files[0], {
-      header: true,
+      header: false,
       complete( results, file ) {
         Meteor.call( 'parseUpload', results.data, ( error, response ) => {
           if ( error ) {
